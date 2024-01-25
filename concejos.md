@@ -6,6 +6,7 @@
 * formar el nombre con un sustantivo o frases de sustantivos
 * no debe ser muy generico
 * usar UpperCamelCase
+* priorizar composicion antes que la herencia
 
 ### 3 preguntas para determinar si es un buen nombre de clase
 

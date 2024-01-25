@@ -5,8 +5,9 @@
     // includes? arrays?
     function isRedFruit( fruit: string ): boolean {
       
-      //* código refactorizado
-      return ( fruit === 'manzana' || fruit === 'cereza' || fruit === 'ciruela' ) ? true : false;
+      //* código refactorizado v2
+      const validFruits:string[] = ['manzana', 'cereza', 'ciruela'];
+      return validFruits.includes(fruit);
 
       //! if ( fruit === 'manzana' || fruit === 'cereza' || fruit === 'ciruela' ) {
       //!     return true;
@@ -17,32 +18,45 @@
 
     // Simplificar esta función
     // switch? Object literal? validar posibles colores
-    function getFruitsByColor( color: string ): string[] {
+    
+    type validFruits = 'red'|'yellow'|'purple';
 
-        switch (color) {
-          case 'red':
-            return ['manzana','fresa'];
-            break;
-          case 'yellow':
-            return ['piña','banana'];
-            break;
-          case 'purple':
-            return ['moras','uvas']
-            break;
-          default:
-            throw Error('the color must be: red, yellow, purple');
-            break;
-        }
+    function getFruitsByColor( color: validFruits ): string[] {
 
-        //! if ( color === 'red' ) {
-        //!     return ['manzana','fresa'];
-        //! } else if ( color === 'yellow') {
-        //!     return ['piña','banana'];
-        //! } else if ( color === 'purple') {
-        //!     return ['moras','uvas']
-        //! } else {
-        //!     throw Error('the color must be: red, yellow, purple');
-        //! }
+      const fruitByColors = {
+        red:     ['manzana','fresa'], 
+        yellow:  ['piña','banana'],   
+        purple:  ['moras','uvas'],   
+      };
+
+      if ( !Object.keys(fruitByColors).includes(color) ) {
+        throw Error('the color must be: red, yellow or purple'); 
+      }
+
+      return fruitByColors[color];
+
+      // mi primera refactorización, no fue lo mejor
+      //! switch (color) {
+      //!   case 'red':
+      //!     return ['manzana','fresa'];
+      //!   case 'yellow':
+      //!     return ['piña','banana'];
+      //!   case 'purple':
+      //!     return ['moras','uvas']
+      //!   default:
+      //!     throw Error('the color must be: red, yellow, purple');
+      //! }
+
+      // la tarea
+      //! if ( color === 'red' ) {
+      //!     return ['manzana','fresa'];
+      //! } else if ( color === 'yellow') {
+      //!     return ['piña','banana'];
+      //! } else if ( color === 'purple') {
+      //!     return ['moras','uvas']
+      //! } else {
+      //!     throw Error('the color must be: red, yellow, purple');
+      //! }
     }
 
     // Simplificar esta función
