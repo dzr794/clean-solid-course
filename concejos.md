@@ -50,4 +50,7 @@ sendEmail(emailArgs);
 - En lo posible, menos de 20 lineas.
 - Evitar el uso del "else".
 - priorizar el uso de la condicional ternaria.
--
+
+# Estructura recomendada de una clase
+
+![1706197356695](image/concejos/1706197356695.png)
