@@ -40,16 +40,28 @@
   'Open and Close'
   Las entidades de software (clases, modulos, metodos, etc.) Abiertos a la extensión pero cerrados a la modificación.
 
+### ¿Cómo detectar violaciones?
+
+* Cambios normalmente afectan nuestra clase o módulo.
+* Cuando una clase o módulo afecta muchas capas. (Presentaciónm almacenamiento, etc.
+
 ## LSP– Liskov Substitution Principle (LSP)
 
-  'substitución de Liskov'
+> "Siendo U un subtipo de T, cualquier sintancia de T deberia de póder ser substituida por cualquier instancia de U sin alterar las propiedades del sistema."
+
+### ¿Cómo detectar violaciones?
+
 
 ## ISP– Interface Segregation Principle (ISP)
 
   'Segregación de interfaz
   trata de evitar que tengamos códig oculto en nuestras clases o funciones
 
+### ¿Cómo detectar violaciones?
+
 ## DIP– Dependency Inversion Principle (DIP)
 
   'Inversión de dependencias'
   segregar respoonsabilidades
+
+### ¿Cómo detectar violaciones?
