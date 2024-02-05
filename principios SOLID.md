@@ -47,7 +47,7 @@
 
 ## LSP– Liskov Substitution Principle (LSP)
 
-> "Siendo U un subtipo de T, cualquier sintancia de T deberia de póder ser substituida por cualquier instancia de U sin alterar las propiedades del sistema."
+> "Siendo U un subtipo de T, cualquier instancia de T deberia de póder ser substituida por cualquier instancia de U sin alterar las propiedades del sistema."
 
 ### ¿Cómo detectar violaciones?
 
@@ -55,7 +55,11 @@
 ## ISP– Interface Segregation Principle (ISP)
 
   'Segregación de interfaz
-  trata de evitar que tengamos códig oculto en nuestras clases o funciones
+  trata de evitar que tengamos códig oculto en nuestras clases o funciones.
+
+> Los clientes no deberían estar obligados a depender de interfaces que no utilicen.
+
+Se puede encontrar en la programación orientada a objetos en los casos donde debido a la herencia de interfaces muy genericas se obliga a usar metodos que puede que no tengan nada que ver con el contrexto de la clase que esta heredando.
 
 ### ¿Cómo detectar violaciones?
 
